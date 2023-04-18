@@ -1,0 +1,2 @@
+#!/bin/bash
+tr ' ' '\n' < words.txt | sort | uniq -c | awk '$1 == 1 {print $2}' | sort
