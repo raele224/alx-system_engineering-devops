@@ -1,0 +1,11 @@
+#!/bin/bash
+shopt -s globstar nullglob
+count=0
+
+for dir in **/*/; do
+    if [[ "$dir" != "./" && "$dir" != "../" ]]; then
+        ((count++))
+    fi
+done
+
+echo "Number of directories and sub-directories: $count"
